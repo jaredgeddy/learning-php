@@ -13,9 +13,13 @@
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+
 </head>
 
 <body>
+
+  <!-- html goes here -->
+
 	<?php
 	//php goes inside here
 	?>
