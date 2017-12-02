@@ -22,8 +22,9 @@
   $city = "Tacoma";
   $state = "WA";
   $zip = 98422;
+  $favPie = "Pecan Pie";
 
-  print "<p> The address is:<br />$street <br />$city, $state $zip</p>";
+  print "<p> The address is:<br />$street <br />$city, $state $zip<br /> My favorite pie is $favPie.</p>";
 
 	?>
 </body>
