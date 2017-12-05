@@ -26,6 +26,8 @@
 
 	<?php  // Script 4.2 - handle_calc.php
 
+    // Turn on Display Errors
+    ini_set ('display_errors', 1);
 
     // Grabbing the variables from POST method - This is the name of the field
     $price = $_POST['price'];
@@ -43,7 +45,7 @@
     // Calculating Tax Rate
     $taxrate = $tax/100;
     $taxrate = $taxrate + 1;
-    $total = $total + $taxrate;
+    $total = $total * $taxrate;
 
     // Calculating Monthly Payment
     $monthly = $total / $payments;
@@ -52,9 +54,10 @@
     print "<p>You have selected to purchase: <br />
       <span class=\"number\">$quantity</span> widget(s) at <br />
       $<span class=\"number\">$price</span> price each plus a <br />
-      $<span class=\"number\">$tax</span> percent tax rate. <br />
+      $<span class=\"number\">$shipping</span> shipping cost and a <br />
+      <span class=\"number\">$tax</span> percent tax rate. <br />
       After your $<span class=\"number\">$discount<span> discount, the total cost is $<span class=\"number\">$total</span>. <br/>
-      Divided over <span class=\"number\">$payments</span> monthly payments, that would be $<span class=\"number\">$monthly</span> each.</p>"
+      Divided over <span class=\"number\">$payments</span> monthly payments, that would be $<span class=\"number\">$monthly</span> each.</p>";
 
 	?>
 
